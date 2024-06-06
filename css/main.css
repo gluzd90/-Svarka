@@ -3,10 +3,8 @@
   --dark-primary: #2a254b;
   --primary: #4e4d93;
   --light-grey: #f9f9f9;
-  --border-grey: #ebe8f4;
   --white: #fff;
   --border-dark: #cac6da;
-  --images---dark-chair: #f6f6f6;
   --font-family: "Satoshi", sans-serif;
   --second-family: "Clash Display", sans-serif;
   --title-family: "Comic", sans-serif;
@@ -173,6 +171,10 @@ a {
 
 .centered {
   text-align: center;
+}
+
+.stop-scroll {
+  overflow: hidden;
 }
 
 .dis-scroll {
@@ -551,12 +553,18 @@ a {
 .swiper__descr {
   display: block;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 38px;
   font-family: var(--title-family);
   line-height: 100px;
   width: 300px;
   text-align: center;
   color: var(--white);
+}
+@media (max-width: 1024px) {
+  .swiper__descr {
+    font-size: 34px;
+    line-height: 50px;
+  }
 }
 @media (max-width: 768px) {
   .swiper__descr {
@@ -648,8 +656,9 @@ a {
   }
 }
 .about__descr--left {
-  padding-left: 30px;
   font-style: italic;
+  padding: 15px;
+  padding-left: 30px;
 }
 @media (max-width: 768px) {
   .about__descr--left {
@@ -1136,7 +1145,7 @@ a {
   display: none;
   position: fixed;
   z-index: 1000;
-  top: 75vh;
+  top: 85vh;
   right: 10%;
 }
 @media (max-width: 1024px) {
@@ -1146,12 +1155,12 @@ a {
 }
 @media (max-width: 768px) {
   .wrapper {
-    top: 80vh;
+    top: 90vh;
   }
 }
 @media (max-width: 450px) {
   .wrapper {
-    top: 83vh;
+    top: 90vh;
     right: 10px;
   }
 }

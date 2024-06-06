@@ -195,6 +195,7 @@ __webpack_require__.r(__webpack_exports__);
   burger?.addEventListener('click', e => {
     burger?.classList.toggle('burger--active');
     menu?.classList.toggle('menu--active');
+    document.body.classList.toggle('stop-scroll');
     if (menu?.classList.contains('menu--active')) {
       burger?.setAttribute('aria-expanded', 'true');
       burger?.setAttribute('aria-label', 'Закрыть меню');
@@ -306,6 +307,19 @@ document.querySelectorAll('.example__img').forEach(img => {
     } else document.querySelector('.pop-up__modal').classList.remove('pop-up__modal--width');
   };
 });
+
+// document.querySelectorAll('.example__block').forEach(img => {
+//   img.onclick = () => {
+//     console.log(img)
+//     document.querySelector('.pop-up').classList.add('pop-up--open');
+//     document.querySelector('.pop-up__img-webp').srcset = document.querySelector('img.example__webp').getAttribute('srcset');
+//     document.querySelector('.pop-up__img').src = document.querySelector('img.example__img').getAttribute('src');
+//     console.log(document.querySelector('.pop-up__img').src)
+//     console.log(document.querySelector('.pop-up__img-webp').srcset)
+//   }
+
+// })
+
 document.querySelector('.pop-up__closed').onclick = () => {
   document.querySelector('.pop-up').classList.remove('pop-up--open');
 };
