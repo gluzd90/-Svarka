@@ -1145,7 +1145,7 @@ a {
   display: none;
   position: fixed;
   z-index: 1000;
-  top: 85vh;
+  top: 75vh;
   right: 10%;
 }
 @media (max-width: 1024px) {
@@ -1155,12 +1155,12 @@ a {
 }
 @media (max-width: 768px) {
   .wrapper {
-    top: 90vh;
+    top: 80vh;
   }
 }
 @media (max-width: 450px) {
   .wrapper {
-    top: 90vh;
+    top: 83vh;
     right: 10px;
   }
 }

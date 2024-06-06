@@ -302,6 +302,13 @@ document.querySelectorAll('.example__img').forEach(img => {
     document.querySelector('.pop-up__img').src = img.getAttribute('src');
     console.log(document.querySelector('.pop-up__img').src);
     console.log(img.getAttribute('src'));
+
+    // document.querySelectorAll('.example__webp').forEach(webp => {
+    //   webp.onclick = () => {
+    //     document.querySelector('.pop-up__img-webp').srcset = webp.getAttribute('srcset');
+    //   }
+
+    // })
     if (document.querySelector('.pop-up__img').getAttribute('src') === 'img/example12.jpeg' || document.querySelector('.pop-up__img').getAttribute('src') === 'img/example8.jpg') {
       document.querySelector('.pop-up__modal').classList.add('pop-up__modal--width');
     } else document.querySelector('.pop-up__modal').classList.remove('pop-up__modal--width');
@@ -312,8 +319,8 @@ document.querySelectorAll('.example__img').forEach(img => {
 //   img.onclick = () => {
 //     console.log(img)
 //     document.querySelector('.pop-up').classList.add('pop-up--open');
-//     document.querySelector('.pop-up__img-webp').srcset = document.querySelector('img.example__webp').getAttribute('srcset');
-//     document.querySelector('.pop-up__img').src = document.querySelector('img.example__img').getAttribute('src');
+//     document.querySelector('.pop-up__img-webp').srcset = document.querySelector('.example__webp').getAttribute('srcset');
+//     document.querySelector('.pop-up__img').src = document.querySelector('.example__img').getAttribute('src');
 //     console.log(document.querySelector('.pop-up__img').src)
 //     console.log(document.querySelector('.pop-up__img-webp').srcset)
 //   }
