@@ -1,0 +1,77 @@
+.install {
+  padding-top: 60px;
+
+  @include small-tablet {
+    padding-top: 30px;
+
+   }
+  &__content {
+    padding: 0 50px;
+
+    @include small-tablet {
+     padding: 0 15px;
+
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 800;
+    font-family: var(--title-family);
+    font-style: italic;
+    color: var(--dark-primary);
+    margin-bottom: 20px;
+
+    @include small-tablet {
+      font-size: 18px;
+
+     }
+  }
+
+  &__list {
+    padding: 30px;
+    padding-left: 150px;
+    border: 2px solid var(--dark-primary);
+    background-position-y: 50%;
+    background-position-x: 50px;
+    background-image: url(../../img/Установка.svg);
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+
+    @include small-tablet {
+     padding: 15px;
+     padding-left: 15px;
+     padding-top: 50px;
+     background-position-y: 15px;
+     background-position-x: 50%;
+     background-size: 30px 30px;
+
+    }
+
+  }
+
+  &__item {
+    margin: 0;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+    font-family: var(--title-family);
+
+    @include small-tablet {
+    font-size: 14px;
+    line-height: 16px;
+
+    }
+}
+
+&__item:not(:last-child) {
+  margin-bottom: 20px;
+
+  @include small-tablet {
+   margin-bottom: 10px;
+
+  }
+}
+  }
+

@@ -1,0 +1,250 @@
+.example {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include tablet {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 800;
+    font-family: var(--title-family);
+    font-style: italic;
+    color: var(--dark-primary);
+    margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 50px;
+  }
+
+  &__item {
+    grid-column: 3 span;
+    height: 250px;
+    border: 3px solid var(--primary);
+    cursor: pointer;
+    overflow: hidden;
+
+    @include tablet {
+      grid-column: 4 span;
+    }
+
+    @include small-tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 12 span;
+    }
+  }
+
+
+
+
+
+  &__item:nth-child(n + 5) {
+    display: none;
+  }
+
+  &__item:nth-child(n + 4) {
+    @include tablet {
+      display: none;
+    }
+
+  }
+
+  &__item:nth-child(n + 3) {
+    @include small-tablet {
+      display: none;
+    }
+
+  }
+
+  &__item:nth-child(n + 2) {
+    @include mobile {
+      display: none;
+    }
+
+  }
+
+  &__item.is-visible {
+    display: block;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+      // border: 3px solid var(--primary);
+      transform: scale(1.1);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__btn-show {
+    padding: 20px;
+    border: 1px solid var(--dark-primary);
+    color: var(--white);
+    font-size: 20px;
+    background-color: var(--primary);
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+
+    &:focus-visible {
+      outline: none;
+      border: 2px solid currentColor;
+    }
+
+    &:hover {
+      background-color: var(--border-dark);
+      color: var(--dark-primary);
+    }
+
+
+    &:active {
+      background-color: var(--dark-primary);
+      color: var(--white);
+    }
+  }
+}
+
+.pop-up {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 500;
+  // display: grid;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, .8);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+
+
+
+  &__modal {
+    position: relative;
+    margin: 30px 15px;
+    width: 70%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .6s ease-in-out;
+
+
+    @include small-tablet {
+      height: 60%;
+      width: 90%;
+      left: 47%
+    }
+
+    @include mobile {
+      height: 50%;
+      width: 90%;
+      left: 45%;
+    }
+  }
+
+  &__modal--width {
+    width: 60%;
+
+    @include tablet {
+      width: 70%;
+    }
+
+    @include small-tablet {
+      width: 80%;
+    }
+
+    @include mobile {
+      width: 90%;
+      height: 50%;
+      left: 46%;
+    }
+  }
+
+  &--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &--open &__modal {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__img {
+    // position: absolute ;
+    // top: 50%;
+    // left: 50%;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    border: 3px solid var(--primary);
+    // transform: translate(-50%, -50%);
+
+
+  }
+
+  &__closed {
+    position: fixed;
+    display: flex;
+    top: 10px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    font-weight: 800;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 40px;
+    color: var(--dark-primary);
+    background-color: var(--white);
+    border-radius: 100%;
+
+    & svg rect {
+      fill: var(--dark-primary);
+    }
+
+    &:hover {
+      background-color: rgba(1, 1, 1, 0.8);
+
+    }
+
+    &:hover svg rect {
+      fill: var(--white);
+
+    }
+
+    &:active {
+      background-color: rgba(1, 1, 1, 0.9);
+
+    }
+
+    &:active svg rect {
+      fill: var(--primary);
+
+    }
+
+  }
+
+
+}

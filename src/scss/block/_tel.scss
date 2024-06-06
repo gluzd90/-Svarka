@@ -1,0 +1,58 @@
+.tel {
+  font-weight: 400;
+  font-size: 28px;
+  font-family: var(--second-family);
+  color: #f8881f;
+  transition: color .3s ease-in-out, font-size .3s ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px dashed currentColor;
+    outline-offset: var(--outline-offset);
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+     color: #df4f0d;
+     font-size: 32px;
+    }
+  }
+
+  @include tablet{
+    @media (any-hover: hover) {
+      &:hover {
+       font-size: 30px;
+      }
+    }
+   }
+
+  @include small-tablet{
+    @media (any-hover: hover) {
+      &:hover {
+       font-size: 20px;
+      }
+    }
+   }
+
+
+  @include mobile{
+    @media (any-hover: hover) {
+      &:hover {
+       font-size: 18px;
+      }
+    }
+   }
+
+  &:active {
+    color: #ee7238 ;
+  }
+
+  @include small-tablet {
+    font-size: 14px;
+
+  }
+}
+

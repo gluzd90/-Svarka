@@ -1,0 +1,123 @@
+.wrapper {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 75vh;
+  right: 10%;
+
+  @include tablet {
+    display: block;
+  }
+  @include small-tablet {
+    top: 80vh;
+  }
+  @include mobile {
+    top: 83vh;
+    right: 10px;
+  }
+}
+
+.pulse {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-color: #36a819;
+  border-radius: 50%;
+  color: var(--white);
+  text-align: center;
+
+  @include small-tablet {
+    width: 70px;
+    height: 70px;
+  }
+
+  @include mobile {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.pulse:hover {
+  animation: phone .9s ease-in-out infinite;
+}
+
+.pulse::before,
+.pulse::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #36a819;
+  border-radius: 50%;
+  left: -20px;
+  right: -20px;
+  top: -20px;
+  bottom: -20px;
+  animation: pulse 1.8s linear infinite;
+}
+
+.pulse::after {
+  animation-delay: .5s;
+}
+
+.phone {
+  position: absolute;
+  display: flex;
+  width: 90px;
+  height: 90px;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  @include small-tablet {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include mobile {
+    width: 40px;
+    height: 40px;
+  }
+
+
+}
+
+@keyframes phone {
+  0% {
+    transform: rotate(-20deg);
+  }
+
+  50% {
+    transform: rotate(21deg);
+  }
+
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}

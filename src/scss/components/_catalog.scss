@@ -1,0 +1,130 @@
+.catalog {
+  padding-top: 60px;
+
+  @include small-tablet {
+    padding-top: 30px;
+
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 38px;
+    font-weight: 800;
+    font-family: var(--title-family);
+    font-style: italic;
+    color: var(--dark-primary);
+    margin-bottom: 20px;
+
+    @include small-tablet {
+      font-size: 18px;
+
+    }
+  }
+
+  &__item {
+    grid-column: 4 span;
+    min-height: 300px;
+    border: 1px solid var(--dark-primary);
+    box-shadow: 10px 10px 22px -7px rgba(0, 0, 0, 0.75);
+
+    @include tablet {
+      grid-column: 6 span;
+
+    }
+
+    @include small-tablet {
+      grid-column: 12 span;
+
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+
+    @include tablet {
+      min-height: 220px;
+    }
+
+    @include small-tablet {
+      min-height: 100px;
+
+    }
+  }
+
+  &__bottom {
+    padding: 30px;
+    min-height: 266px;
+    background: linear-gradient(90deg, rgba(10, 69, 126, 0.028448879551820738) 26%, rgba(10, 69, 126, 0.6587009803921569) 90%);
+
+    @include small-tablet {
+      padding: 15px;
+      min-height: 200px;
+
+    }
+  }
+
+  &__botom-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    font-family: var(--title-family);
+    color: var(--dark-primary);
+    margin-bottom: 10px;
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+
+    }
+  }
+
+  &__price {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    font-family: var(--title-family);
+    margin-bottom: 15px;
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+
+    }
+  }
+
+  &__item-description {
+    padding-left: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    font-family: var(--title-family);
+    margin-bottom: 10px;
+    background-image: url(../../img/perfect-circle_icon-icons.com_53928.svg);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position-y: 6px;
+
+    @include tablet {
+      font-size: 16px;
+      background-position-y: 3px;
+    }
+
+    @include small-tablet {
+      font-size: 14px;
+      background-size: 10px 10px;
+      background-position: 4px;
+
+    }
+  }
+}
