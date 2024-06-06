@@ -841,7 +841,7 @@ a {
   line-height: 140%;
   font-family: var(--title-family);
   margin-bottom: 10px;
-  background-image: url(../../img/perfect-circle_icon-icons.com_53928.svg);
+  background-image: url(../img/perfect-circle_icon-icons.com_53928.svg);
   background-repeat: no-repeat;
   background-size: 15px 15px;
   background-position-y: 6px;
@@ -896,7 +896,7 @@ a {
   border: 2px solid var(--dark-primary);
   background-position-y: 50%;
   background-position-x: 50px;
-  background-image: url(../../img/Установка.svg);
+  background-image: url(../img/Установка.svg);
   background-repeat: no-repeat;
   background-size: 50px 50px;
 }
